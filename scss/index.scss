@@ -51,7 +51,7 @@ html, body {
         background-color: $color3;
         position: relative;
         border-radius: 15px;
-        box-shadow: 0px 0px 5px 2px $bgcolor1;
+        box-shadow: -1px 3px 20px 0px $text-color;
 
         #nav {
 
@@ -60,7 +60,7 @@ html, body {
             background-color: $color4;
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
-            box-shadow: 0px 0px 5px 2px $bgcolor1;
+            box-shadow: 0px 2px 20px 0px $bgcolor1;
 
             #boards {
 
@@ -334,7 +334,7 @@ html, body {
                     border: 1px solid transparent;
                     border-top-left-radius: 3px;
                     border-bottom-left-radius: 3px;
-                    box-shadow: 0px 0px 5px 0px $bgcolor1;
+                    box-shadow: -1px 2px 20px 0px $bgcolor1;
                     font-size: 20px;
                 }
 
@@ -424,7 +424,7 @@ html, body {
                 width: 100%;
                 height: 40px;
                 margin: 56px 0 0;
-                border: 1px solid $icon-color;
+                border-bottom: 1px solid $icon-color;
                 padding: 10px 0 0 0;
 
                 .pencil {
@@ -455,8 +455,8 @@ html, body {
 
                 width: 100%;
                 height: 40px;
-                margin: 83px 0 0;
-                border: 1px solid $icon-color;
+                margin: 84px 0 0;
+                border-top: 1px solid $icon-color;
                 padding: 10px 0 0 0;
 
                 .user-cards {
@@ -490,7 +490,6 @@ html, body {
                     text-align: center;
                     text-transform: uppercase;
                     margin-top: -11px;
-                    border-left: 1px solid $icon-color;
 
                     .info-button2-icon {
                         float: left;

@@ -30,14 +30,14 @@ html, body {
     background-color: #f6f7fb;
     position: relative;
     border-radius: 15px;
-    box-shadow: 0px 0px 5px 2px #dfe0e4; }
+    box-shadow: -1px 3px 20px 0px #989fa7; }
     #background #page #nav {
       width: 100%;
       height: 8%;
       background-color: #ffffff;
       border-top-left-radius: 15px;
       border-top-right-radius: 15px;
-      box-shadow: 0px 0px 5px 2px #dfe0e4; }
+      box-shadow: 0px 2px 20px 0px #dfe0e4; }
       #background #page #nav #boards {
         width: 15%;
         float: left; }
@@ -212,7 +212,7 @@ html, body {
           border: 1px solid transparent;
           border-top-left-radius: 3px;
           border-bottom-left-radius: 3px;
-          box-shadow: 0px 0px 5px 0px #dfe0e4;
+          box-shadow: -1px 2px 20px 0px #dfe0e4;
           font-size: 20px; }
         #background #page #buttons #filters #lines {
           width: 40px;
@@ -272,7 +272,7 @@ html, body {
         width: 100%;
         height: 40px;
         margin: 56px 0 0;
-        border: 1px solid #cbcfd2;
+        border-bottom: 1px solid #cbcfd2;
         padding: 10px 0 0 0; }
         #background #page #cards .icons .pencil {
           float: left;
@@ -289,8 +289,8 @@ html, body {
       #background #page #cards .info {
         width: 100%;
         height: 40px;
-        margin: 83px 0 0;
-        border: 1px solid #cbcfd2;
+        margin: 84px 0 0;
+        border-top: 1px solid #cbcfd2;
         padding: 10px 0 0 0; }
         #background #page #cards .info .user-cards {
           width: 50%;
@@ -315,8 +315,7 @@ html, body {
           float: left;
           text-align: center;
           text-transform: uppercase;
-          margin-top: -11px;
-          border-left: 1px solid #cbcfd2; }
+          margin-top: -11px; }
           #background #page #cards .info .user-profile .info-button2-icon {
             float: left;
             padding: 11px 6px 0 26px;
