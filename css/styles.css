@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "project-2";
+  src:url("../fonts/project-2.eot");
+  src:url("../fonts/project-2.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/project-2.woff") format("woff"),
+    url("../fonts/project-2.ttf") format("truetype"),
+    url("../fonts/project-2.svg#project-2") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "project-2" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "project-2" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-list:before {
+  content: "\61";
+}
+.icon-th-large:before {
+  content: "\62";
+}
+.icon-search:before {
+  content: "\63";
+}
+.icon-bell-o:before {
+  content: "\64";
+}
+.icon-star:before {
+  content: "\65";
+}
+.icon-delete-garbage-streamline:before {
+  content: "\66";
+}
+.icon-pencil:before {
+  content: "\67";
+}
+.icon-torso:before {
+  content: "\68";
+}
+.icon-user-plus:before {
+  content: "\69";
+}
+.icon-filter:before {
+  content: "\6a";
+}
+.icon-graph-horizontal:before {
+  content: "\6b";
+}
