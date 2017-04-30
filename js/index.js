@@ -232,7 +232,7 @@ $('#form').submit(function(e) {
 
             updateCards(increment);
 
-            $('#modal').css('display', 'none');
+            $('#modal').fadeOut();
             
             $("#form").each(function(){
                 this.reset();
@@ -245,6 +245,13 @@ $('#form').submit(function(e) {
 $(document).ready(function() {
     updateCards(0);
     $('#add-btn').click(function() {
-        $('#modal').css('display', 'block');
+        $('#modal').fadeIn();
     });
+
+    $("#modal").on("click",function(event) {
+        if (event.target == this) {
+            $("#modal").fadeOut();
+        }
+    });
+
 });
