@@ -170,19 +170,59 @@ function updateCards(i) {
 
 }
 
-var blankInputCheck = '';
-var letters = /^[a-zA-Z\s]+$/;
-var numbers = /^[0-9]+$/;
+var pictureValidationPass = "false";
+var nameValidationPass = "false";
+var handleValidationPass = "false";
+var taskValidationPass = "false";
 
 var pictureInput = document.getElementById('picture');
-var nameInput = $('#name');
+var nameInput = document.getElementById('name');
 var handleInput = document.getElementById('handle');
 var taskInput = document.getElementById('tasks');
+
+var blankInputCheck = '';
+var imageURL = /(https?:\/\/.*\.(?:png|jpg))/i;
+var letters = /^[a-zA-Z\s]+$/;
+var lettersAndNumbers = /^[a-zA-Z0-9_]+$/;
+var numbers = /^[0-9]+$/;
+
+pictureInput.oninput = function() {
+    if ((this.value.match(imageURL)) && (this.value !== blankInputCheck)) {
+        pictureValidationPass = "true";
+    } else {
+        pictureValidationPass = "false";
+    }
+};
+
+nameInput.oninput = function() {
+    if (this.value.match(letters) && (this.value !== blankInputCheck)) {
+        nameValidationPass = "true";
+    } else {
+        nameValidationPass = "false";
+    }
+};
+
+handleInput.oninput = function() {
+    if (this.value.match(lettersAndNumbers) && (this.value !== blankInputCheck)) {
+        handleValidationPass = "true";
+    } else {
+        handleValidationPass = "false";
+    }
+};
+
+taskInput.oninput = function() {
+    if (this.value.match(numbers) && (this.value !== blankInputCheck)) {
+        taskValidationPass = "true";
+    } else {
+        taskValidationPass = "false";
+    }
+};
+
 
 $('#form').submit(function(e) {
 		e.preventDefault();
 
-        if(pictureInput.value && nameInput.value && handleInput.value && taskInput.value !== blankInputCheck){
+        if((pictureValidationPass !== "false") && (nameValidationPass !== "false") && (handleValidationPass !== "false") && (taskValidationPass !== "false")) {
             userCards.push({
                 'Picture' : pictureInput.value,
                 'Name' : nameInput.value,
