@@ -125,6 +125,22 @@ html, body {
           font-size: 24px;
           text-align: center;
           color: #cbcfd2; }
+    #background #page #side-menu {
+      width: 5%;
+      height: 92%;
+      background-color: #ffffff;
+      margin: 0 0 0 95%;
+      position: absolute;
+      border-top: 2px solid #dfe0e4;
+      border-left: 2px solid #dfe0e4;
+      border-bottom: 2px solid #dfe0e4;
+      border-bottom-right-radius: 15px;
+      display: none; }
+      #background #page #side-menu .pages {
+        color: #989fa7;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        margin: 10% 0; }
     #background #page #buttons {
       width: 90%;
       height: 43px;
@@ -402,7 +418,8 @@ html, body {
     margin: 12.5% auto;
     background-color: #f6f7fb;
     border-radius: 15px;
-    padding-top: 50px; }
+    padding-top: 50px;
+    font-family: Arial, sans-serif; }
     #modal #form .label {
       width: 80%;
       margin: 0 10%;

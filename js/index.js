@@ -254,4 +254,8 @@ $(document).ready(function() {
         }
     });
 
+    $('#menu').click(function() {
+        $('#side-menu').slideToggle();
+    });
+
 });

@@ -215,6 +215,28 @@ html, body {
 
         }
 
+        #side-menu {
+
+            width: 5%;
+            height: 92%;
+            background-color: $color4;
+            margin: 0 0 0 95%;
+            position: absolute;
+            border-top: 2px solid $bgcolor1;
+            border-left: 2px solid $bgcolor1;
+            border-bottom: 2px solid $bgcolor1;
+            border-bottom-right-radius: 15px;
+            display: none;
+
+            .pages {
+                color: $text-color;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                margin: 10% 0;
+            }
+
+        }
+
         #buttons {
 
             width: 90%;
@@ -623,6 +645,7 @@ html, body {
         background-color: $color3;
         border-radius: 15px;
         padding-top: 50px;
+        font-family: Arial, sans-serif;
 
         .label {
             width: 80%;
