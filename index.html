@@ -5,7 +5,7 @@
         <title>Trello</title>
         <link href="css/index.css" rel="stylesheet">
         <link href="css/styles.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <!--<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">-->
     </head>
 
     <body>
@@ -38,7 +38,7 @@
                 </div>
 
                 <div id="cards">
-                    <div id="card1" class="start-card">
+                    <!--<div id="card1" class="start-card">
                         <img class="profile-img" src="images/user-icon.png">
                         <div class="username">
                             <h4 class="name">Shawn Garner</h4>
@@ -162,17 +162,31 @@
                             <div class="user-cards"><div class="info-button1-icon"><span class="icon-th-large"></span></div><h4 class="info-button1">cards</h4></div>
                             <div class="user-profile"><div class="info-button2-icon"><span class="icon-torso"></span></div><h4 class="info-button2">profile</h4></div>
                         </div>
-                    </div>
+                    </div>-->
 
                     <div id="add-card">
                         <div id="placeholder-img"><span class="icon-user-plus"></span></div>
                         <div id="add-text">Add members to the team</div>
+                        <div id="add-btn">+</div>
                     </div>
 
                 </div>
-
-                <div id="add-btn">+</div>
             </div>
         </div>
+        <div id="modal">
+            <form id="form">
+                <label class="label" for="picture">Enter URL for profile picture</label>
+                <input class="fields" type="text" id="picture" name="picture">
+                <label class="label" for="name">Enter Name for profile name</label>
+                <input class="fields" type="text" id="name" name="name">
+                <label class="label" for="handle">Enter Handle for profile handle</label>
+                <input class="fields" type="text" id="handle" name="handle">
+                <label class="label" for="tasks">Enter Number of tasks for profile tasks</label>
+                <input class="fields" type="text" id="tasks" name="tasks">
+                <input type="submit" id="submit" value="Submit">
+            </form>
+        </div>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/index.js"></script>
     </body>
 </html>

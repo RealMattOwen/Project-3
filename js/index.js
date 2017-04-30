@@ -1,19 +1,210 @@
-var myObjectArray = [
-{
-  'DateOfBirth' : '06/11/1978',
-  'Phone' : '770-786',
-  'Email' : 'pbishop@hotmail.com' ,
-  'Ethnicity' : 'Declined' ,
-  'Race' : 'OtherRace'
-},
-{'DateOfBirth' : '06/11/1978',
-  'Phone' : '770-786',
-  'Email' : 'pbishop@hotmail.com' ,
-  'Ethnicity' : 'Declined' ,
-  'Race' : 'Hi'
- }]
+var userCards = [
+  {
+    'Picture' : 'images/user-icon.png',
+    'Name' : 'Shawn Garner',
+    'Handle' : '@onlydesign',
+    'Tasks' : '68'
+  },
+  {
+    'Picture' : 'images/user-icon.png',
+    'Name' : 'Mathew Carron',
+    'Handle' : '@mathew',
+    'Tasks' : '0'
+  },
+  {
+    'Picture' : 'images/user-icon.png',
+    'Name' : 'Leona Curtis',
+    'Handle' : '@norules',
+    'Tasks' : '34'
+  }/*,
+  {
+    'Picture' : 'images/user-icon.png',
+    'Name' : 'Alta Black',
+    'Handle' : '@altablack',
+    'Tasks' : '74'
+  },
+  {
+    'Picture' : 'images/user-icon.png',
+    'Name' : 'Abbie Roy',
+    'Handle' : '@abbie',
+    'Tasks' : '0'
+  },
+  {
+    'Picture' : 'images/user-icon.png',
+    'Name' : 'Juan Bennet',
+    'Handle' : '@bennet',
+    'Tasks' : '0'
+  },
+  {
+    'Picture' : 'images/user-icon.png',
+    'Name' : 'Jared Lambert',
+    'Handle' : '@jared89',
+    'Tasks' : '21'
+  },
+  {
+    'Picture' : 'images/user-icon.png',
+    'Name' : 'Matt Owen',
+    'Handle' : '@matt',
+    'Tasks' : '0'
+  }*/
+];
 
-for (var i = 0; i < myObjectArray.length; i++) {
-    var raceName = myObjectArray[i].Race;
-    console.log(raceName);
+var i;
+
+var increment = 0;
+
+function updateCards(i) {
+
+    for (i; i < userCards.length; i++) {
+    
+        var userPicture = userCards[i].Picture;
+        var userName = userCards[i].Name;
+        var userHandle = userCards[i].Handle;
+        var userTasks = userCards[i].Tasks;
+
+        var startCard = '<div class="start-card">\
+                            <img class="profile-img" src="' + userPicture + '">\
+                            <div class="username">\
+                                <h4 class="name">' + userName + '</h4>\
+                                <h6 class="handle">' + userHandle + '</h6>\
+                            </div>\
+                            <div class="icons">\
+                                <div class="pencil"><span class="icon-pencil"></span></div>\
+                                <div class="bell"><span class="icon-bell-o"></span></div>\
+                                <div class="garbage"><span class="icon-delete-garbage-streamline"></span></div>\
+                            </div>\
+                            <div class="tasks">\
+                                <div class="graph">&nbsp;</div>\
+                                <div class="open-tasks">\
+                                    <span class="task-number">' + userTasks + '</span>\
+                                    <div class="task-text">Open Tasks</div>\
+                                </div>\
+                            </div>\
+                            <div class="info">\
+                                <div class="user-cards"><div class="info-button1-icon"><span class="icon-th-large"></span></div><h4 class="info-button1">cards</h4></div>\
+                                <div class="user-profile"><div class="info-button2-icon"><span class="icon-torso"></span></div><h4 class="info-button2">profile</h4></div>\
+                            </div>\
+                        </div>';
+
+        var card = '<div class="card">\
+                        <img class="profile-img" src="' + userPicture + '">\
+                        <div class="username">\
+                            <h4 class="name">' + userName + '</h4>\
+                            <h6 class="handle">' + userHandle + '</h6>\
+                        </div>\
+                        <div class="icons">\
+                            <div class="pencil"><span class="icon-pencil"></span></div>\
+                            <div class="bell"><span class="icon-bell-o"></span></div>\
+                            <div class="garbage"><span class="icon-delete-garbage-streamline"></span></div>\
+                        </div>\
+                        <div class="tasks">\
+                            <div class="graph">&nbsp;</div>\
+                            <div class="open-tasks">\
+                                <span class="task-number">' + userTasks + '</span>\
+                                <div class="task-text">Open Tasks</div>\
+                            </div>\
+                        </div>\
+                        <div class="info">\
+                            <div class="user-cards"><div class="info-button1-icon"><span class="icon-th-large"></span></div><h4 class="info-button1">cards</h4></div>\
+                            <div class="user-profile"><div class="info-button2-icon"><span class="icon-torso"></span></div><h4 class="info-button2">profile</h4></div>\
+                        </div>\
+                    </div>';
+
+        var endCard = '<div class="end-card">\
+                            <img class="profile-img" src="' + userPicture + '">\
+                            <div class="username">\
+                                <h4 class="name">' + userName + '</h4>\
+                                <h6 class="handle">' + userHandle + '</h6>\
+                            </div>\
+                            <div class="icons">\
+                                <div class="pencil"><span class="icon-pencil"></span></div>\
+                                <div class="bell"><span class="icon-bell-o"></span></div>\
+                                <div class="garbage"><span class="icon-delete-garbage-streamline"></span></div>\
+                            </div>\
+                            <div class="tasks">\
+                                <div class="graph">&nbsp;</div>\
+                                <div class="open-tasks">\
+                                    <span class="task-number">' + userTasks + '</span>\
+                                    <div class="task-text">Open Tasks</div>\
+                                </div>\
+                            </div>\
+                            <div class="info">\
+                                <div class="user-cards"><div class="info-button1-icon"><span class="icon-th-large"></span></div><h4 class="info-button1">cards</h4></div>\
+                                <div class="user-profile"><div class="info-button2-icon"><span class="icon-torso"></span></div><h4 class="info-button2">profile</h4></div>\
+                            </div>\
+                        </div>';
+        
+        increment++;
+
+        switch(i) {
+            case 0:
+                $('#add-card').before(startCard);
+                break;
+            case 1:
+                $('#add-card').before(card);
+                break;
+            case 2:
+                $('#add-card').before(card);
+                break;
+            case 3:
+                $('#add-card').before(endCard).css('margin', '0 1% 1% 0');
+                break;
+            case 4:
+                $('#add-card').before(startCard).css('margin', '0 1% 1%');
+                break;
+            case 5:
+                $('#add-card').before(card).css('margin', '0 1% 1%');
+                break;
+            case 6:
+                $('#add-card').before(card).css('margin', '0 0 1% 1%');
+                break;
+            case 7: 
+                $('#add-card').before(endCard);
+                $('#add-card').remove();
+                break;
+            default:
+                break;
+        }
+
+    }
+
 }
+
+var blankInputCheck = '';
+var letters = /^[a-zA-Z\s]+$/;
+var numbers = /^[0-9]+$/;
+
+var pictureInput = document.getElementById('picture');
+var nameInput = $('#name');
+var handleInput = document.getElementById('handle');
+var taskInput = document.getElementById('tasks');
+
+$('#form').submit(function(e) {
+		e.preventDefault();
+
+        if(pictureInput.value && nameInput.value && handleInput.value && taskInput.value !== blankInputCheck){
+            userCards.push({
+                'Picture' : pictureInput.value,
+                'Name' : nameInput.value,
+                'Handle' : '@' + handleInput.value,
+                'Tasks' : taskInput.value
+            }); 
+
+            updateCards(increment);
+
+            $('#modal').css('display', 'none');
+            
+            $("#form").each(function(){
+                this.reset();
+            });
+
+        }
+
+});
+
+$(document).ready(function() {
+    updateCards(0);
+    $('#add-btn').click(function() {
+        $('#modal').css('display', 'block');
+    });
+});
