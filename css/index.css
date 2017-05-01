@@ -232,6 +232,28 @@ html, body {
         float: left;
         margin-left: 27%;
         font-family: Arial, sans-serif; }
+        #background #page #buttons #filters #user-search {
+          position: absolute;
+          width: 10%;
+          top: 13.5%;
+          left: 73.5%;
+          display: none; }
+          #background #page #buttons #filters #user-search input[type=text] {
+            background-color: transparent;
+            width: 100%;
+            border: none;
+            outline: none;
+            color: #989fa7; }
+          #background #page #buttons #filters #user-search input[type=text]::-webkit-input-placeholder {
+            color: #cbcfd2; }
+          #background #page #buttons #filters #user-search input[type=text]:-moz-placeholder {
+            /* Firefox 18- */
+            color: #cbcfd2; }
+          #background #page #buttons #filters #user-search input[type=text]::-moz-placeholder {
+            /* Firefox 19+ */
+            color: #cbcfd2; }
+          #background #page #buttons #filters #user-search input[type=text]:-ms-input-placeholder {
+            color: #cbcfd2; }
         #background #page #buttons #filters #filter {
           width: 40px;
           height: 40px;

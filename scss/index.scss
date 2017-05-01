@@ -380,6 +380,40 @@ html, body {
                 margin-left: 27%;
                 font-family: Arial, sans-serif;
 
+                #user-search {
+            
+                    position: absolute;
+                    width: 10%;
+                    top: 13.5%;
+                    left: 73.5%;
+                    display: none;
+
+                    input[type=text] {
+                        background-color: transparent;
+                        width: 100%;
+                        border: none;
+                        outline: none;  
+                        color: $text-color;
+                    }
+
+                    input[type=text]::-webkit-input-placeholder {
+                        color: $icon-color;
+                    }
+                    
+                    input[type=text]:-moz-placeholder { /* Firefox 18- */
+                        color: $icon-color;
+                    }
+                    
+                    input[type=text]::-moz-placeholder {  /* Firefox 19+ */
+                        color: $icon-color;  
+                    }
+                    
+                    input[type=text]:-ms-input-placeholder {  
+                        color: $icon-color; 
+                    }
+
+                }
+                
                 #filter {
                     width: 40px;
                     height: 40px;
@@ -422,7 +456,7 @@ html, body {
                 }
 
             }
-
+        
         }
 
         #cards {

@@ -220,6 +220,7 @@ taskInput.oninput = function() {
 
 
 $('#form').submit(function(e) {
+
 		e.preventDefault();
 
         if((pictureValidationPass !== "false") && (nameValidationPass !== "false") && (handleValidationPass !== "false") && (taskValidationPass !== "false")) {
@@ -242,7 +243,34 @@ $('#form').submit(function(e) {
 
 });
 
+function memberSearch() {
+    // Declare variables 
+    var input, filter, users, user, data, searchNumber;
+    input = document.getElementById('search');
+    userInput = input.value;
+    filter = userInput.toUpperCase();
+    users = document.getElementsByClassName('name');
+    console.log(users);
+    user = users[0];
+    console.log(user);
+    var test = user.innerHTML;
+    console.log(test);
+
+    // Loop through all table rows, and hide those who don't match the search query
+    for (searchNumber = 0; searchNumber < users.length; searchNumber++) {
+        //data = tr[searchNumber].getElementsByTagName("td")[0];
+        if (user) {
+            if (test.toUpperCase().indexOf(filter) > -1) {
+                user.style.display = '';
+            } else {
+                user.style.display = 'none';
+            }
+        } 
+    }
+}
+
 $(document).ready(function() {
+    
     updateCards(0);
     $('#add-btn').click(function() {
         $('#modal').fadeIn();
@@ -257,5 +285,11 @@ $(document).ready(function() {
     $('#menu').click(function() {
         $('#side-menu').slideToggle();
     });
+
+    $('#filter').click(function() {
+        $('#user-search').toggle('slide', {direction:'right'}, 400);
+    });
+
+    memberSearch();
 
 });
