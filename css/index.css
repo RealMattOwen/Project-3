@@ -127,7 +127,7 @@ html, body {
           color: #cbcfd2; }
     #background #page #side-menu {
       width: 5%;
-      height: 92%;
+      height: 92.1%;
       background-color: #ffffff;
       margin: 0 0 0 95%;
       position: absolute;
@@ -137,10 +137,35 @@ html, body {
       border-bottom-right-radius: 15px;
       display: none; }
       #background #page #side-menu .pages {
-        color: #989fa7;
-        font-family: Arial, sans-serif;
-        font-size: 14px;
-        margin: 10% 0; }
+        text-align: center; }
+        #background #page #side-menu .pages a #codingphase-img {
+          width: 76px;
+          height: 60px;
+          margin: 36% 0 0 -2px; }
+        #background #page #side-menu .pages a #youtube-img {
+          width: 56px;
+          height: 60px;
+          margin: 42% 0 0 0; }
+        #background #page #side-menu .pages a #gitter-img {
+          width: 68px;
+          height: 68px;
+          margin: 42% 0 0 0; }
+        #background #page #side-menu .pages a #github-img {
+          width: 60px;
+          height: 60px;
+          margin: 42% 0 0 0; }
+        #background #page #side-menu .pages a #twitter-img {
+          width: 56px;
+          height: 46px;
+          margin: 42% 0 0 0; }
+        #background #page #side-menu .pages a #instagram-img {
+          width: 64px;
+          height: 64px;
+          margin: 42% 0 0 2px; }
+        #background #page #side-menu .pages a #patreon-img {
+          width: 56px;
+          height: 56px;
+          margin: 42% 0 0 1px; }
     #background #page #buttons {
       width: 90%;
       height: 43px;
