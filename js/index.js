@@ -62,7 +62,7 @@ function updateCards(i) {
         var userHandle = userCards[i].Handle;
         var userTasks = userCards[i].Tasks;
 
-        var card = '<div class="card searchRef">\
+        var card = '<div id="card' + i + '" class="card searchRef">\
                         <img class="profile-img" src="' + userPicture + '">\
                         <div class="username">\
                             <h4 class="name">' + userName + '</h4>\
@@ -91,27 +91,35 @@ function updateCards(i) {
         switch(i) {
             case 0:
                 $('#add-card').before(card);
+                $('#card0').hide().fadeIn(1000);
                 break;
             case 1:
                 $('#add-card').before(card);
+                $('#card1').hide().fadeIn(1000);
                 break;
             case 2:
                 $('#add-card').before(card);
+                $('#card2').hide().fadeIn(1000);
                 break;
             case 3:
                 $('#add-card').before(card);
+                $('#card3').hide().fadeIn(1000);
                 break;
             case 4:
                 $('#add-card').before(card);
+                $('#card4').hide().fadeIn(1000);
                 break;
             case 5:
                 $('#add-card').before(card);
+                $('#card5').hide().fadeIn(1000);
                 break;
             case 6:
                 $('#add-card').before(card);
+                $('#card6').hide().fadeIn(1000);
                 break;
             case 7: 
                 $('#add-card').before(card);
+                $('#card7').hide().fadeIn(1000);
                 $('#add-card').remove();
                 break;
             default:
