@@ -62,30 +62,6 @@ function updateCards(i) {
         var userHandle = userCards[i].Handle;
         var userTasks = userCards[i].Tasks;
 
-        var startCard = '<div class="start-card searchRef">\
-                            <img class="profile-img" src="' + userPicture + '">\
-                            <div class="username">\
-                                <h4 class="name">' + userName + '</h4>\
-                                <h6 class="handle">' + userHandle + '</h6>\
-                            </div>\
-                            <div class="icons">\
-                                <div class="pencil"><span class="icon-pencil"></span></div>\
-                                <div class="bell"><span class="icon-bell-o"></span></div>\
-                                <div class="garbage"><span class="icon-delete-garbage-streamline"></span></div>\
-                            </div>\
-                            <div class="tasks">\
-                                <div class="graph">&nbsp;</div>\
-                                <div class="open-tasks">\
-                                    <span class="task-number">' + userTasks + '</span>\
-                                    <div class="task-text">Open Tasks</div>\
-                                </div>\
-                            </div>\
-                            <div class="info">\
-                                <div class="user-cards"><div class="info-button1-icon"><span class="icon-th-large"></span></div><h4 class="info-button1">cards</h4></div>\
-                                <div class="user-profile"><div class="info-button2-icon"><span class="icon-torso"></span></div><h4 class="info-button2">profile</h4></div>\
-                            </div>\
-                        </div>';
-
         var card = '<div class="card searchRef">\
                         <img class="profile-img" src="' + userPicture + '">\
                         <div class="username">\
@@ -109,36 +85,12 @@ function updateCards(i) {
                             <div class="user-profile"><div class="info-button2-icon"><span class="icon-torso"></span></div><h4 class="info-button2">profile</h4></div>\
                         </div>\
                     </div>';
-
-        var endCard = '<div class="end-card searchRef">\
-                            <img class="profile-img" src="' + userPicture + '">\
-                            <div class="username">\
-                                <h4 class="name">' + userName + '</h4>\
-                                <h6 class="handle">' + userHandle + '</h6>\
-                            </div>\
-                            <div class="icons">\
-                                <div class="pencil"><span class="icon-pencil"></span></div>\
-                                <div class="bell"><span class="icon-bell-o"></span></div>\
-                                <div class="garbage"><span class="icon-delete-garbage-streamline"></span></div>\
-                            </div>\
-                            <div class="tasks">\
-                                <div class="graph">&nbsp;</div>\
-                                <div class="open-tasks">\
-                                    <span class="task-number">' + userTasks + '</span>\
-                                    <div class="task-text">Open Tasks</div>\
-                                </div>\
-                            </div>\
-                            <div class="info">\
-                                <div class="user-cards"><div class="info-button1-icon"><span class="icon-th-large"></span></div><h4 class="info-button1">cards</h4></div>\
-                                <div class="user-profile"><div class="info-button2-icon"><span class="icon-torso"></span></div><h4 class="info-button2">profile</h4></div>\
-                            </div>\
-                        </div>';
         
         increment++;
 
         switch(i) {
             case 0:
-                $('#add-card').before(startCard);
+                $('#add-card').before(card);
                 break;
             case 1:
                 $('#add-card').before(card);
@@ -147,19 +99,19 @@ function updateCards(i) {
                 $('#add-card').before(card);
                 break;
             case 3:
-                $('#add-card').before(endCard).css('margin', '0 1% 1% 0');
+                $('#add-card').before(card);
                 break;
             case 4:
-                $('#add-card').before(startCard).css('margin', '0 1% 1%');
+                $('#add-card').before(card);
                 break;
             case 5:
-                $('#add-card').before(card).css('margin', '0 1% 1%');
+                $('#add-card').before(card);
                 break;
             case 6:
-                $('#add-card').before(card).css('margin', '0 0 1% 1%');
+                $('#add-card').before(card);
                 break;
             case 7: 
-                $('#add-card').before(endCard);
+                $('#add-card').before(card);
                 $('#add-card').remove();
                 break;
             default:

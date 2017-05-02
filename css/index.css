@@ -184,7 +184,8 @@ html, body {
           padding: 10px;
           border-radius: 6px;
           box-shadow: 0px 1px 4px 1px #4886ff;
-          margin-right: 20px; }
+          margin-left: 5px;
+          margin-right: 15px; }
           #background #page #buttons #team #star .icon-star {
             color: #ffffff; }
           #background #page #buttons #team #star #star-background {
@@ -304,7 +305,7 @@ html, body {
       #background #page #cards .card {
         width: 23.281%;
         height: 48.65%;
-        margin: 0 1% 1%;
+        margin: 0 0.5% 1%;
         display: inline-block;
         background-color: #ffffff;
         border-radius: 4px;
@@ -411,7 +412,7 @@ html, body {
       #background #page #cards #add-card {
         width: 23.281%;
         height: 48.65%;
-        margin: 0 0 1% 1%;
+        margin: 0 0.5% 1%;
         border: 1px dashed #cbcfd2;
         display: inline-block;
         border-radius: 4px; }
