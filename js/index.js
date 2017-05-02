@@ -62,7 +62,7 @@ function updateCards(i) {
         var userHandle = userCards[i].Handle;
         var userTasks = userCards[i].Tasks;
 
-        var startCard = '<div class="start-card">\
+        var startCard = '<div class="start-card searchRef">\
                             <img class="profile-img" src="' + userPicture + '">\
                             <div class="username">\
                                 <h4 class="name">' + userName + '</h4>\
@@ -86,7 +86,7 @@ function updateCards(i) {
                             </div>\
                         </div>';
 
-        var card = '<div class="card">\
+        var card = '<div class="card searchRef">\
                         <img class="profile-img" src="' + userPicture + '">\
                         <div class="username">\
                             <h4 class="name">' + userName + '</h4>\
@@ -110,7 +110,7 @@ function updateCards(i) {
                         </div>\
                     </div>';
 
-        var endCard = '<div class="end-card">\
+        var endCard = '<div class="end-card searchRef">\
                             <img class="profile-img" src="' + userPicture + '">\
                             <div class="username">\
                                 <h4 class="name">' + userName + '</h4>\
@@ -245,25 +245,24 @@ $('#form').submit(function(e) {
 
 function memberSearch() {
     // Declare variables 
-    var input, filter, users, user, data, searchNumber;
-    input = document.getElementById('search');
-    userInput = input.value;
-    filter = userInput.toUpperCase();
-    users = document.getElementsByClassName('name');
-    console.log(users);
-    user = users[0];
-    console.log(user);
-    var test = user.innerHTML;
-    console.log(test);
+    var input, filter, profiles, profile, profileNames, profileName, searchNumber;
+    input = document.getElementById('search-box');
+    filter = input.value.toUpperCase();
+    profiles = document.getElementsByClassName('searchRef');
 
     // Loop through all table rows, and hide those who don't match the search query
-    for (searchNumber = 0; searchNumber < users.length; searchNumber++) {
-        //data = tr[searchNumber].getElementsByTagName("td")[0];
-        if (user) {
-            if (test.toUpperCase().indexOf(filter) > -1) {
-                user.style.display = '';
+    for (searchNumber = 0; searchNumber < profiles.length; searchNumber++) {
+
+        profile = document.getElementsByClassName('name');
+
+        profileNames = profile[searchNumber];
+        profileName = profileNames.innerHTML;
+
+        if (profileNames) {
+            if (profileName.toUpperCase().indexOf(filter) > -1) {
+                $(profiles[searchNumber]).css('display', 'inline-block');
             } else {
-                user.style.display = 'none';
+                $(profiles[searchNumber]).css('display', 'none');
             }
         } 
     }
@@ -290,6 +289,11 @@ $(document).ready(function() {
         $('#user-search').toggle('slide', {direction:'right'}, 400);
     });
 
-    memberSearch();
+    var input = document.getElementById('search-box');
+    console.log(input);
+
+    input.oninput = function () {
+        memberSearch();
+    };
 
 });
