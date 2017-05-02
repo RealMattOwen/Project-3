@@ -242,7 +242,6 @@ $(document).ready(function() {
     });
 
     var input = document.getElementById('search-box');
-    console.log(input);
 
     input.oninput = function () {
         memberSearch();
