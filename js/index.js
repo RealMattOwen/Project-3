@@ -1,66 +1,73 @@
-var userCards = [
+var userCards = [                          // Array called 'userCards' with objects for each card and name value pairs of properties for each.
   {
-    'Picture' : 'images/user-icon.png',
-    'Name' : 'Shawn Garner',
-    'Handle' : '@onlydesign',
-    'Tasks' : '68'
+    Picture : 'images/user-icon.png',
+    Name : 'Shawn Garner',
+    Handle : '@onlydesign',
+    Tasks : 68
   },
   {
-    'Picture' : 'images/user-icon.png',
-    'Name' : 'Mathew Carron',
-    'Handle' : '@mathew',
-    'Tasks' : '0'
+    Picture : 'images/user-icon.png',
+    Name : 'Mathew Carron',
+    Handle : '@mathew',
+    Tasks : 0
   },
   {
-    'Picture' : 'images/user-icon.png',
-    'Name' : 'Leona Curtis',
-    'Handle' : '@norules',
-    'Tasks' : '34'
-  }/*,
+    Picture : 'images/user-icon.png',
+    Name : 'Leona Curtis',
+    Handle : '@norules',
+    Tasks : 34
+  }/*                                      // Objects for pre-existing cards, commented out so new cards can be created.
   {
-    'Picture' : 'images/user-icon.png',
-    'Name' : 'Alta Black',
-    'Handle' : '@altablack',
-    'Tasks' : '74'
+    Picture : 'images/user-icon.png',
+    Name : 'Alta Black',
+    Handle : '@altablack',
+    Tasks : 74
   },
   {
-    'Picture' : 'images/user-icon.png',
-    'Name' : 'Abbie Roy',
-    'Handle' : '@abbie',
-    'Tasks' : '0'
+    Picture : 'images/user-icon.png',
+    Name : 'Abbie Roy',
+    Handle : '@abbie',
+    Tasks : 0
   },
   {
-    'Picture' : 'images/user-icon.png',
-    'Name' : 'Juan Bennet',
-    'Handle' : '@bennet',
-    'Tasks' : '0'
+    Picture : 'images/user-icon.png',
+    Name : 'Juan Bennet',
+    Handle : '@bennet',
+    Tasks : 0
   },
   {
-    'Picture' : 'images/user-icon.png',
-    'Name' : 'Jared Lambert',
-    'Handle' : '@jared89',
-    'Tasks' : '21'
+    Picture : 'images/user-icon.png',
+    Name : 'Jared Lambert',
+    Handle : '@jared89',
+    Tasks : 21
   },
   {
-    'Picture' : 'images/user-icon.png',
-    'Name' : 'Matt Owen',
-    'Handle' : '@matt',
-    'Tasks' : '0'
+    Picture : 'images/user-icon.png',
+    Name : 'Matt Owen',
+    Handle : '@matt',
+    Tasks : 0
   }*/
 ];
 
-var i;
+var i;                                     // Defining a variable called 'i', for use later or in the code.   
 
-var increment = 0;
+var increment = 0;                         // Defining a variable called 'increment' and setting its value to '0'.
 
-function updateCards(i) {
+function updateCards(i) {                  // Function called updateCards, with a parameter of 'i', which passes the value current value of 'i' through to the function.
 
-    for (i; i < userCards.length; i++) {
+    for (i; i < userCards.length; i++) {   // For loop calling the value of 'i', then checking the condition of whether the value of 'i' is less than the length of the 'userCards' array, if it is then 'i' will increment by '1', if not it wont increment.
     
-        var userPicture = userCards[i].Picture;
-        var userName = userCards[i].Name;
-        var userHandle = userCards[i].Handle;
-        var userTasks = userCards[i].Tasks;
+        var userPicture = userCards[i].Picture;     // Defining a variable called 'userPicture' and storing the value of the 'Picture' keypair from the object that is in the 'userCards' array that is currently being accessed.
+                                                    // All objects in the array will be iterated through because the object that is being accessed is dependant on the value of 'i', which will keep incrementing until the number of objects is reached because of the for loop that it is within.
+
+        var userName = userCards[i].Name;           // Defining a variable called 'userName' and storing the value of the 'Name' keypair from the object that is in the 'userCards' array that is currently being accessed.
+                                                    // All objects in the array will be iterated through because the object that is being accessed is dependant on the value of 'i', which will keep incrementing until the number of objects is reached because of the for loop that it is within.
+
+        var userHandle = userCards[i].Handle;       // Defining a variable called 'userHandle' and storing the value of the 'Handle' keypair from the object that is in the 'userCards' array that is currently being accessed.
+                                                    // All objects in the array will be iterated through because the object that is being accessed is dependant on the value of 'i', which will keep incrementing until the number of objects is reached because of the for loop that it is within.
+        
+        var userTasks = userCards[i].Tasks;         // Defining a variable called 'userTasks' and storing the value of the 'Tasks' keypair from the object that is in the 'userCards' array that is currently being accessed.
+                                                    // All objects in the array will be iterated through because the object that is being accessed is dependant on the value of 'i', which will keep incrementing until the number of objects is reached because of the for loop that it is within.
 
         var card = '<div id="card' + i + '" class="card searchRef">\
                         <img class="profile-img" src="' + userPicture + '">\
@@ -85,10 +92,17 @@ function updateCards(i) {
                             <div class="user-profile"><div class="info-button2-icon"><span class="icon-torso"></span></div><h4 class="info-button2">profile</h4></div>\
                         </div>\
                     </div>';
-        
-        increment++;
 
-        switch(i) {
+        // Defining a variable called 'card' and storing the HTML and JS for the creation of a new card instead of copy and pasting it 8 times, 1 time for each card, it makes it easier to define it once as a variable and reuse it.
+        // I used '\' at the end of each line to utilise 'multi-line' javascript, which allows you to continue your code onto the next line but have it act as if it were on one line.
+        // IMPORTANT: It is important to note that no spaces are left after the '\' at the end of the line as it will cause your code not to work.
+        // Within the variable 'card', you can see the previously created variables: 'i', 'userPicture', 'userName', 'userHandle' and 'userTasks' being used, the values of each are being concatenated to the releveant line of HTML.
+        // The variable 'i' is being used to create a unique id for every card created by being concatenated with the current id of 'card', because the id is utilising the variable 'i' which will be incremented every time the loop runs, each card will be given its own unique id.
+        
+        increment++;        // On this line you can see the variable 'increment' being incremented by one.
+
+        switch(i) {         // Switch statement, runs appropriate case code depending on which case value matches the current value of 'i'.
+                            // Switch statements can accept numbers as well as strings, be sure to enclose the case values within apostrophes, not sure what everyone else calls them, but these things ''.
             case 0:
                 $('#add-card').before(card);
                 $('#card0').hide().fadeIn(1000);
@@ -185,10 +199,10 @@ $('#form').submit(function(e) {
 
         if((pictureValidationPass !== "false") && (nameValidationPass !== "false") && (handleValidationPass !== "false") && (taskValidationPass !== "false")) {
             userCards.push({
-                'Picture' : pictureInput.value,
-                'Name' : nameInput.value,
-                'Handle' : '@' + handleInput.value,
-                'Tasks' : taskInput.value
+                Picture : pictureInput.value,
+                Name : nameInput.value,
+                Handle : '@' + handleInput.value,
+                Tasks : taskInput.value
             }); 
 
             updateCards(increment);
