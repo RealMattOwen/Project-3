@@ -50,9 +50,6 @@
 .icon-bell-o:before {
   content: "\64";
 }
-.icon-star:before {
-  content: "\65";
-}
 .icon-delete-garbage-streamline:before {
   content: "\66";
 }
@@ -70,4 +67,7 @@
 }
 .icon-graph-horizontal:before {
   content: "\6b";
+}
+.icon-star:before {
+  content: "\6c";
 }

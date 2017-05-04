@@ -104,7 +104,7 @@ function updateCards(i) {                  // Function called updateCards, with 
         switch(i) {         // Switch statement, runs appropriate case code depending on which case value matches the current value of 'i'.
                             // Switch statements can accept numbers as well as strings, be sure to enclose the case values within apostrophes, not sure what everyone else calls them, but these things ''.
             case 0:         // Example: case '0' runs if the value of 'i' is 0 and so on.
-                addCard.before(card);
+                addCard.before(card);               //
                 $('#card0').hide().fadeIn(1000);
                 break;
             case 1:
@@ -213,6 +213,11 @@ $('#form').submit(function(e) {
                 this.reset();
             });
 
+        } else {
+            $('#submit').attr("disabled", true).val('Please fill in all fields.');
+            setTimeout(function() {
+                $('#submit').val('Submit').attr("disabled", false);;
+            }, 4000);
         }
 
 });
