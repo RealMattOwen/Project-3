@@ -253,7 +253,7 @@ $(document).ready(function() {
         $('#modal').fadeIn();
     });
 
-    $("#modal").on("click",function(event) {
+    $("#modal").click(function(event) {
         if (event.target === this) {
             $("#modal").fadeOut();
         }
