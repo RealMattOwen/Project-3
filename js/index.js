@@ -104,9 +104,9 @@ function updateCards(i) {                  // Function called updateCards, with 
         switch(i) {         // Switch statement, runs appropriate case code depending on which case value matches the current value of 'i'.
                             // Switch statements can accept numbers as well as strings, be sure to enclose the case values within apostrophes, not sure what everyone else calls them, but these things ''.
             case 0:         // Example: case '0' runs if the value of 'i' is 0 and so on.
-                addCard.before(card);
-                $('#card0').hide().fadeIn(1000);
-                break;
+                addCard.before(card);   // Here the '.before' method is being used to insert the value of the variable 'card' before the value of 'addCard' resulting in a new card being created.
+                $('#card0').hide().fadeIn(1000);    // This hides the currently selected card and then fades it in over the course of 1 second. Not necessary but I think it looks cool.
+                break;                              // The 'break' statement stops the switch statement from continuing, if the 'switch'statement was not used, then the entire block of code would run. Feel free to see what happens by removing the 'break' statements.
             case 1:
                 addCard.before(card);
                 $('#card1').hide().fadeIn(1000);
@@ -134,33 +134,37 @@ function updateCards(i) {                  // Function called updateCards, with 
             case 7: 
                 addCard.before(card);
                 $('#card7').hide().fadeIn(1000);
-                addCard.remove();
+                addCard.remove();                   // Removes the HTML element stored in the variable 'addCard' so that no more cards can be created.
                 break;
-            default:
+            default:                                // If for whatever reason 'i' is some how equal to anything other than the value already defined in the cases, nothing should be done,therefore upon 'default', 'default' being anything not already checked for in the cases, it will just stop the 'switch' statement.
                 break;
         }
+
+        var memberCount = i + 1;                            // Declaring a variable called 'memberCount' and storing the value of 'i' + 1. I did this to create a variable with the correct amount of cards that have been created from 1-8.
+
+        $('#member-count').html('(' + memberCount + ')');   // Selects element with id of 'member-count' and sets the value of it to be the value of the variable 'memberCount'.
 
     }
 
 }
 
-var pictureValidationPass = 'false';
-var nameValidationPass = 'false';
-var handleValidationPass = 'false';
-var taskValidationPass = 'false';
+var pictureValidationPass = 'false';                        // Declaring a variable called 'pictureValidationPass' for validation, the initial value of it being set to false.
+var nameValidationPass = 'false';                           // Declaring a variable called 'nameValidationPass' for validation, the initial value of it being set to false.
+var handleValidationPass = 'false';                         // Declaring a variable called 'taskValidationPass' for validation, the initial value of it being set to false.
+var taskValidationPass = 'false';                           // Declaring a variable called 'taskValidationPass' for validation, the initial value of it being set to false.
 
-var pictureInput = document.getElementById('picture');
-var nameInput = document.getElementById('name');
-var handleInput = document.getElementById('handle');
-var taskInput = document.getElementById('tasks');
+var pictureInput = document.getElementById('picture');      // Declaring a variable called 'pictureInput' and storing the HTML element with the id of 'picture'.
+var nameInput = document.getElementById('name');            // Declaring a variable called 'nameInput' and storing the HTML element with the id of 'name'.
+var handleInput = document.getElementById('handle');        // Declaring a variable called 'handleInput' and storing the HTML element with the id of 'handle'.
+var taskInput = document.getElementById('tasks');           // Declaring a variable called 'taskInput' and storing the HTML element with the id of 'tasks'.
 
-var blankInputCheck = '';
-var imageURL = /(https?:\/\/.*\.(?:png|jpg))/i;
-var letters = /^[a-zA-Z\s]+$/;
-var lettersAndNumbers = /^[a-zA-Z0-9_]+$/;
-var numbers = /^[0-9]+$/;
+var blankInputCheck = '';                                   // Declaring a variable called 'blankInputCheck' with a value of nothing in a string.
+var imageURL = /(https?:\/\/.*\.(?:png|jpg))/i;             // Declaring a variable called 'imageURL' with a regular expression to check if the link that has been input is a link to a '.png' or '.jpg' image.
+var letters = /^[a-zA-Z\s]+$/;                              // Declaring a variable called 'letters'  with a regular expression to check if what is input only contains letters.
+var lettersAndNumbers = /^[a-zA-Z0-9_]+$/;                  // Declaring a variable called 'lettersAndNumbers'  with a regular expression to check if what is input only contains letters, numbers and underscores.
+var numbers = /^[0-9]+$/;                                   // Declaring a variable called 'numbers'  with a regular expression to check if what is input only contains numbers.
 
-pictureInput.oninput = function() {
+pictureInput.oninput = function() {                                                     //
     if ((this.value.match(imageURL)) && (this.value !== blankInputCheck)) {
         pictureValidationPass = 'true';
     } else {
